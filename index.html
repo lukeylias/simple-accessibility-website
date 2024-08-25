@@ -9,54 +9,97 @@
       href="https://fonts.googleapis.com/css2?family=Figtree&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <header class="header-wrapper">
     <div class="navigation-wrapper">
       <div class="container-navigation">
         <div class="navigation-link-wrapper">
-          <a href="www.simpleaccessibility.org" class="nav-logo-link"
+          <a href="index.html" class="nav-logo-link"
             ><img src="assets/sa_logo.png" alt="simple accessiblity logo"
           /></a>
-          <nav role="navigation" class="">
+          <nav role="navigation" class="menu-wrap">
             <a
-              href="https://www.simpleaccessibility.org/getting-started"
+              href="getting-started.html"
               class="navigation-toggle-2 single-link w-inline-block"
               ><div>Getting started</div></a
             >
+            <div class="navigation-toggle-dropdown" onclick="toggleSubMenu()">
+              <div>Creating</div>
+              <span class="material-symbols-rounded"> expand_more </span>
+              <div class="submenu" id="submenu">
+                <a href="#" class="submenu-item">
+                  <span class="material-symbols-rounded"> brush </span>Designing
+                </a>
+                <a href="#" class="submenu-item">
+                  <span class="material-symbols-rounded"> edit </span>Writing
+                </a>
+                <a href="#" class="submenu-item">
+                  <span class="material-symbols-rounded"> code </span>Developing
+                </a>
+              </div>
+            </div>
+
             <a
-              href="https://www.simpleaccessibility.org/getting-started"
+              href="design.html"
               class="navigation-toggle-2 single-link w-inline-block"
-              ><div>Design</div></a
+              ><div>Testing</div></a
+            >
+            <a
+              href="design.html"
+              class="navigation-toggle-2 single-link w-inline-block"
+              ><div>Support</div></a
             >
           </nav>
+          <!-- Menu Button -->
+          <div class="menu-button">
+            <span class="material-symbols-rounded"> menu </span>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="drawer-overlay"></div>
+    <div class="drawer-menu">
+      <a href="getting-started.html" class="drawer-link">Getting started</a>
+      <a href="design.html" class="drawer-link">Design</a>
     </div>
   </header>
 
   <body>
     <main>
       <section>
-        <h1 class="heading-3xl">Hello world</h1>
-        <h2 class="heading-2xl">Hello world</h2>
-        <p class="body-lg">
-          Using a mix of qualitative data and user feedback, in 2020 we
-          identified a handfull of issues with Discord's registration and
-          onboarding. Applying max-width: 60ch is generally most effective for
-          blocks of text, such as paragraphs, where controlling the line length
-          directly impacts readability.
-        </p>
-        <p class="body-lg">
-          For headings, while it's also beneficial to maintain readability, they
-          typically don't require the same constraints since they are shorter in
-          length and serve as visual anchors rather than continuous reading
-          material. However, ensuring headings do not span too wide a distance
-          can still be important for overall layout consistency.
+        <h1 class="heading-4xl">Accessibility simplified</h1>
+        <p class="heading-xl">
+          Guidance for people wanting to create an inclusive web space for
+          everyone.
         </p>
         <button>Label</button>
         <a href="">Label</a>
       </section>
     </main>
+    <hr class="divider margin-top-2xl" />
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>© 2024 Simple accessibility</p>
+          <p>
+            Illustrations by
+            <a href="https://example.com" class="footer-link">Mary Amato</a>
+          </p>
+        </div>
+        <ul class="footer-nav">
+          <li>
+            <a href="getting_started.html" class="footer-link"
+              >Getting started</a
+            >
+          </li>
+          <li><a href="design.html" class="footer-link">Design</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
