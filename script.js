@@ -1,3 +1,59 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Attach event listeners to all dropdown buttons
+  const dropdownButtons = document.querySelectorAll(
+    ".navigation-toggle-dropdown"
+  );
+
+  dropdownButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      toggleSubMenu(button);
+      event.stopPropagation();
+    });
+
+    button.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+        toggleSubMenu(button);
+        event.preventDefault();
+      }
+    });
+  });
+
+  // Close submenus when clicking outside
+  document.addEventListener("click", function () {
+    closeAllSubMenus();
+  });
+
+  function toggleSubMenu(button) {
+    const submenu = button.nextElementSibling;
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+    closeAllSubMenus(); // Close other submenus
+
+    if (!isExpanded) {
+      openSubMenu(button, submenu);
+    }
+  }
+
+  function openSubMenu(button, submenu) {
+    submenu.classList.add("show");
+    button.classList.add("chevron-up");
+    button.setAttribute("aria-expanded", "true");
+  }
+
+  function closeSubMenu(button, submenu) {
+    submenu.classList.remove("show");
+    button.classList.remove("chevron-up");
+    button.setAttribute("aria-expanded", "false");
+  }
+
+  function closeAllSubMenus() {
+    dropdownButtons.forEach((button) => {
+      const submenu = button.nextElementSibling;
+      closeSubMenu(button, submenu);
+    });
+  }
+});
+
 // Toggle the drawer menu open and close
 document.querySelector(".menu-button").addEventListener("click", function () {
   document.body.classList.toggle("drawer-open");
@@ -26,59 +82,3 @@ document
       this.click();
     }
   });
-
-// Submenu functionality (if needed)
-function toggleSubMenu(event) {
-  const submenu = document.querySelector(".submenu");
-  const dropdownButton = document.querySelector(".navigation-toggle-dropdown");
-  submenu.classList.toggle("show");
-  dropdownButton.classList.toggle("chevron-up");
-
-  const isExpanded = dropdownButton.getAttribute("aria-expanded") === "true";
-  dropdownButton.setAttribute("aria-expanded", !isExpanded);
-
-  if (submenu.classList.contains("show")) {
-    document.addEventListener("click", closeSubMenuOnClickOutside);
-  } else {
-    document.removeEventListener("click", closeSubMenuOnClickOutside);
-  }
-
-  if (event) {
-    event.stopPropagation();
-    event.preventDefault();
-  }
-}
-
-// Close the submenu when clicking outside of it
-function closeSubMenuOnClickOutside(event) {
-  const submenu = document.querySelector(".submenu");
-  const dropdownButton = document.querySelector(".navigation-toggle-dropdown");
-
-  if (
-    !dropdownButton.contains(event.target) &&
-    !submenu.contains(event.target)
-  ) {
-    submenu.classList.remove("show");
-    dropdownButton.classList.remove("chevron-up");
-    dropdownButton.setAttribute("aria-expanded", "false");
-    document.removeEventListener("click", closeSubMenuOnClickOutside);
-  }
-}
-
-// Handle keyboard interaction for the dropdown menu
-function handleDropdownKeydown(event) {
-  const dropdownButton = event.target;
-
-  if (event.key === "Enter" || event.key === " ") {
-    toggleSubMenu(event);
-  }
-
-  if (event.key === "Escape") {
-    const submenu = document.querySelector(".submenu");
-
-    submenu.classList.remove("show");
-    dropdownButton.classList.remove("chevron-up");
-    dropdownButton.setAttribute("aria-expanded", "false");
-    document.removeEventListener("click", closeSubMenuOnClickOutside);
-  }
-}

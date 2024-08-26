@@ -31,15 +31,15 @@
                 ><div>Getting started</div></a
               >
 
-              <!-- Submenu section -->
+              <!-- Existing Submenu -->
               <div class="navigation-toggle-container">
                 <button
                   class="navigation-toggle-dropdown"
                   tabindex="0"
                   aria-expanded="false"
-                  aria-controls="submenu"
-                  onclick="toggleSubMenu(event)"
-                  onkeydown="handleDropdownKeydown(event)"
+                  aria-controls="submenu1"
+                  onclick="toggleSubMenu('submenu1')"
+                  onkeydown="handleDropdownKeydown(event, 'submenu1')"
                 >
                   <span>Creating</span>
                   <span class="chevron-icon material-symbols-rounded"
@@ -47,7 +47,7 @@
                   >
                 </button>
 
-                <div class="submenu" id="submenu">
+                <div class="submenu" id="submenu1">
                   <a href="design.html" class="submenu-item">
                     <span class="material-symbols-rounded">palette</span>
                     <div class="submenu-text">
@@ -73,6 +73,53 @@
                       <div class="submenu-label">Develop</div>
                       <div class="submenu-description">
                         Integrate accessibility into your development process.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- New Submenu -->
+              <div class="navigation-toggle-container">
+                <button
+                  class="navigation-toggle-dropdown"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="submenu2"
+                  onclick="toggleSubMenu('submenu2')"
+                  onkeydown="handleDropdownKeydown(event, 'submenu2')"
+                >
+                  <span>Managing</span>
+                  <span class="chevron-icon material-symbols-rounded"
+                    >expand_more</span
+                  >
+                </button>
+
+                <div class="submenu" id="submenu2">
+                  <a href="project-management.html" class="submenu-item">
+                    <span class="material-symbols-rounded">assignment</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Project Management</div>
+                      <div class="submenu-description">
+                        Tools and practices for managing accessible projects.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="team.html" class="submenu-item">
+                    <span class="material-symbols-rounded">groups</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Team</div>
+                      <div class="submenu-description">
+                        Build and manage inclusive teams.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="resources.html" class="submenu-item">
+                    <span class="material-symbols-rounded">library_books</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Resources</div>
+                      <div class="submenu-description">
+                        Explore resources to support accessibility initiatives.
                       </div>
                     </div>
                   </a>
