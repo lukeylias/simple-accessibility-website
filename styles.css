@@ -468,6 +468,7 @@ header {
   line-height: var(--font-line-height-600);
   transition: all 0.2s;
   display: flex;
+  margin-right: 4px;
 }
 
 .navigation-toggle-2:hover {
@@ -582,71 +583,137 @@ footer {
   opacity: 1;
 }
 
+/* Container to wrap the button and submenu */
+.navigation-toggle-container {
+  position: relative; /* Positioning reference for the button */
+}
+
 .navigation-toggle-dropdown {
   display: flex;
   align-items: center;
-  cursor: pointer;
   padding: 12px 20px;
   font-size: var(--font-size-400);
   font-weight: var(--font-weight-regular);
   line-height: var(--font-line-height-600);
-  transition: all 0.2s;
   color: var(--color-text);
-  position: relative; /* Ensure the submenu is positioned relative to this element */
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s, color 0.2s;
+  margin-right: 4px;
 }
 
 .navigation-toggle-dropdown:hover {
-  background-color: var(--color-bg-surface-hover);
-  font-weight: var(--font-weight-semibold);
+  color: #093c3f;
+  background-color: #ecf1f1;
+  font-weight: var(--font-weight-regular);
+  outline: none;
 }
 
 /* Submenu container */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%; /* Position it right below the dropdown */
-  left: 0; /* Align it to the left of the dropdown */
+  top: 100%;
+  left: 0;
   background-color: var(--color-bg-fill);
   box-shadow: var(--shadow-200);
+  border: #000 1px solid;
   border-radius: var(--border-radius-200);
   overflow: hidden;
   z-index: 10;
-  min-width: 200px; /* Ensure submenu has enough width */
+  min-width: 350px;
 }
 
-/* Submenu items */
 .submenu-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px 16px;
   color: var(--color-text);
   text-decoration: none;
-  border-bottom: 1px solid var(--color-border);
+  font-weight: var(--font-weight-regular);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .submenu-item:hover {
-  background-color: var(--color-bg-surface-hover);
+  color: #093c3f;
+  background-color: #ecf1f1;
+  text-decoration: none;
+  font-weight: var(--font-weight-regular); /* Consistent weight on hover */
 }
 
-/* Material icons in submenu */
 .submenu-item .material-symbols-rounded {
-  margin-right: 8px;
-  font-size: 24px;
+  margin-right: 12px;
+  /* font-size: 24px; */
   color: var(--color-brand-700);
+}
+
+.submenu-text {
+  display: flex;
+  flex-direction: column; /* Stack label and description vertically */
+  align-items: flex-start; /* Ensure text is aligned to the left */
+}
+
+.submenu-label {
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-semibold); /* Slightly bolder for the label */
+  color: var(--color-brand-700);
+  text-align: left; /* Left align the text */
+}
+
+.submenu-description {
+  font-size: var(--font-size-400);
+  color: var(--color-brand-700);
+  margin-top: 4px;
+  text-align: left;
 }
 
 .submenu.show {
   display: block; /* Make sure the submenu is displayed */
 }
 
-.material-symbols-rounded {
+/* .material-symbols-rounded {
   font-size: 24px;
   margin-left: 5px;
   transition: transform 0.3s ease;
+} */
+
+.chevron-up .chevron-icon {
+  transform: rotate(180deg);
 }
 
-.chevron-up .material-symbols-rounded {
-  transform: rotate(180deg);
+/* Ensure Submenu is Aligned with Trigger */
+.navigation-toggle-dropdown .submenu {
+  left: 0; /* Aligns the submenu to the left edge of the dropdown trigger */
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px; /* Hidden off-screen */
+  left: 40px;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-600);
+  border-radius: var(--border-radius-200);
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  text-decoration: underline;
+}
+
+/* Prevent scrolling when the drawer is open */
+body.drawer-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 /* Mobile devices (up to 600px) */

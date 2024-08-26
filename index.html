@@ -14,62 +14,80 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
-  <header class="header-wrapper">
-    <div class="navigation-wrapper">
-      <div class="container-navigation">
-        <div class="navigation-link-wrapper">
-          <a href="index.html" class="nav-logo-link"
-            ><img src="assets/sa_logo.png" alt="simple accessiblity logo"
-          /></a>
-          <nav role="navigation" class="menu-wrap">
-            <a
-              href="getting-started.html"
-              class="navigation-toggle-2 single-link w-inline-block"
-              ><div>Getting started</div></a
+  <body>
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+
+    <header class="header-wrapper">
+      <div class="navigation-wrapper">
+        <div class="container-navigation">
+          <div class="navigation-link-wrapper">
+            <a href="index.html" class="nav-logo-link"
+              ><img src="assets/sa_logo.png" alt="simple accessibility logo"
+            /></a>
+            <nav role="navigation" class="menu-wrap">
+              <a
+                href="getting-started.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Getting started</div></a
+              >
+              <a
+                href="design.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Design</div></a
+              >
+              <a
+                href="write.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Write</div></a
+              >
+              <a
+                href="develop.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Develop</div></a
+              >
+              <a
+                href="testing.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Test</div></a
+              >
+              <a
+                href="support.html"
+                class="navigation-toggle-2 single-link w-inline-block"
+                ><div>Support</div></a
+              >
+            </nav>
+            <!-- Menu Button -->
+            <div
+              class="menu-button"
+              tabindex="0"
+              role="button"
+              aria-label="Open menu"
             >
-            <div class="navigation-toggle-dropdown" onclick="toggleSubMenu()">
-              <div>Creating</div>
-              <span class="material-symbols-rounded"> expand_more </span>
-              <div class="submenu" id="submenu">
-                <a href="#" class="submenu-item">
-                  <span class="material-symbols-rounded"> brush </span>Designing
-                </a>
-                <a href="#" class="submenu-item">
-                  <span class="material-symbols-rounded"> edit </span>Writing
-                </a>
-                <a href="#" class="submenu-item">
-                  <span class="material-symbols-rounded"> code </span>Developing
-                </a>
-              </div>
+              <span class="material-symbols-rounded">menu</span>
             </div>
 
-            <a
-              href="design.html"
-              class="navigation-toggle-2 single-link w-inline-block"
-              ><div>Testing</div></a
-            >
-            <a
-              href="design.html"
-              class="navigation-toggle-2 single-link w-inline-block"
-              ><div>Support</div></a
-            >
-          </nav>
-          <!-- Menu Button -->
-          <div class="menu-button">
-            <span class="material-symbols-rounded"> menu </span>
+            <div class="drawer-menu" aria-hidden="true">
+              <a href="getting-started.html" class="drawer-link" tabindex="-1"
+                >Getting started</a
+              >
+              <a href="design.html" class="drawer-link" tabindex="-1">Design</a>
+              <a href="write.html" class="drawer-link" tabindex="-1">Write</a>
+              <a href="develop.html" class="drawer-link" tabindex="-1"
+                >Develop</a
+              >
+              <a href="testing.html" class="drawer-link" tabindex="-1"
+                >Testing</a
+              >
+              <a href="support.html" class="drawer-link" tabindex="-1"
+                >Support</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="drawer-overlay"></div>
-    <div class="drawer-menu">
-      <a href="getting-started.html" class="drawer-link">Getting started</a>
-      <a href="design.html" class="drawer-link">Design</a>
-    </div>
-  </header>
+    </header>
 
-  <body>
-    <main>
+    <main id="main-content">
       <section>
         <h1 class="heading-4xl">Accessibility simplified</h1>
         <p class="heading-xl">
@@ -80,7 +98,9 @@
         <a href="">Label</a>
       </section>
     </main>
+
     <hr class="divider margin-top-2xl" />
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
