@@ -30,21 +30,55 @@
                 class="navigation-toggle-2 single-link w-inline-block"
                 ><div>Getting started</div></a
               >
-              <a
-                href="design.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Design</div></a
-              >
-              <a
-                href="write.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Write</div></a
-              >
-              <a
-                href="develop.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Develop</div></a
-              >
+
+              <!-- Submenu section -->
+              <div class="navigation-toggle-container">
+                <button
+                  class="navigation-toggle-dropdown"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="submenu"
+                  onclick="toggleSubMenu(event)"
+                  onkeydown="handleDropdownKeydown(event)"
+                >
+                  <span>Creating</span>
+                  <span class="chevron-icon material-symbols-rounded"
+                    >expand_more</span
+                  >
+                </button>
+
+                <div class="submenu" id="submenu">
+                  <a href="design.html" class="submenu-item">
+                    <span class="material-symbols-rounded">palette</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Design</div>
+                      <div class="submenu-description">
+                        Create interfaces that are visually appealing and
+                        accessible
+                      </div>
+                    </div>
+                  </a>
+                  <a href="write.html" class="submenu-item">
+                    <span class="material-symbols-rounded">stylus_note</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Write</div>
+                      <div class="submenu-description">
+                        Craft clear and inclusive content
+                      </div>
+                    </div>
+                  </a>
+                  <a href="develop.html" class="submenu-item">
+                    <span class="material-symbols-rounded">code</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Develop</div>
+                      <div class="submenu-description">
+                        Integrate accessibility into your development process.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
               <a
                 href="testing.html"
                 class="navigation-toggle-2 single-link w-inline-block"
@@ -56,6 +90,7 @@
                 ><div>Support</div></a
               >
             </nav>
+
             <!-- Menu Button -->
             <div
               class="menu-button"
