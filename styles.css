@@ -624,6 +624,8 @@ footer {
   overflow: hidden;
   z-index: 10;
   min-width: 350px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .submenu-item {
@@ -670,9 +672,9 @@ footer {
 }
 
 .submenu.show {
-  display: block; /* Make sure the submenu is displayed */
+  display: block;
+  opacity: 1;
 }
-
 /* .material-symbols-rounded {
   font-size: 24px;
   margin-left: 5px;

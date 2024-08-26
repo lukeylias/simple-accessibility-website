@@ -25,37 +25,183 @@
               ><img src="assets/sa_logo.png" alt="simple accessibility logo"
             /></a>
             <nav role="navigation" class="menu-wrap">
+              <!-- New Submenu for Getting Started -->
+              <div class="navigation-toggle-container">
+                <button
+                  class="navigation-toggle-dropdown"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="submenu1"
+                  onclick="toggleSubMenu('submenu1')"
+                  onkeydown="handleDropdownKeydown(event, 'submenu1')"
+                >
+                  <span>Getting Started</span>
+                  <span class="chevron-icon material-symbols-rounded"
+                    >expand_more</span
+                  >
+                </button>
+
+                <div class="submenu" id="submenu1">
+                  <a href="what-is-accessibility.html" class="submenu-item">
+                    <span class="material-symbols-rounded">info</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">What is Accessibility</div>
+                      <div class="submenu-description">
+                        An introduction to the importance of accessibility.
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="web-accessibility-standards.html"
+                    class="submenu-item"
+                  >
+                    <span class="material-symbols-rounded">policy</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">
+                        Web Accessibility Standards
+                      </div>
+                      <div class="submenu-description">
+                        Overview of web accessibility guidelines and standards.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="legal-and-compliance.html" class="submenu-item">
+                    <span class="material-symbols-rounded">gavel</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Legal and Compliance</div>
+                      <div class="submenu-description">
+                        Understand the legal requirements for web accessibility.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="how-to-use-the-site.html" class="submenu-item">
+                    <span class="material-symbols-rounded">explore</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">How to Use the Site</div>
+                      <div class="submenu-description">
+                        Learn how to navigate and use the accessibility site
+                        effectively.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Submenu 2 -->
+              <div class="navigation-toggle-container">
+                <button
+                  class="navigation-toggle-dropdown"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="submenu2"
+                  onclick="toggleSubMenu('submenu2')"
+                  onkeydown="handleDropdownKeydown(event, 'submenu2')"
+                >
+                  <span>Creating</span>
+                  <span class="chevron-icon material-symbols-rounded"
+                    >expand_more</span
+                  >
+                </button>
+
+                <div class="submenu" id="submenu2">
+                  <a href="design.html" class="submenu-item">
+                    <span class="material-symbols-rounded">palette</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Design</div>
+                      <div class="submenu-description">
+                        Create interfaces that are visually appealing and
+                        accessible
+                      </div>
+                    </div>
+                  </a>
+                  <a href="write.html" class="submenu-item">
+                    <span class="material-symbols-rounded">stylus_note</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Write</div>
+                      <div class="submenu-description">
+                        Craft clear and inclusive content
+                      </div>
+                    </div>
+                  </a>
+                  <a href="develop.html" class="submenu-item">
+                    <span class="material-symbols-rounded">code</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Develop</div>
+                      <div class="submenu-description">
+                        Integrate accessibility into your development process.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Submenu 3 -->
+              <div class="navigation-toggle-container">
+                <button
+                  class="navigation-toggle-dropdown"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="submenu3"
+                  onclick="toggleSubMenu('submenu3')"
+                  onkeydown="handleDropdownKeydown(event, 'submenu3')"
+                >
+                  <span>Testing</span>
+                  <span class="chevron-icon material-symbols-rounded"
+                    >expand_more</span
+                  >
+                </button>
+
+                <div class="submenu" id="submenu3">
+                  <a href="basic-testing.html" class="submenu-item">
+                    <span class="material-symbols-rounded">fact_check</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Basic Testing</div>
+                      <div class="submenu-description">
+                        Learn the basics of accessibility testing.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="automated-testing.html" class="submenu-item">
+                    <span class="material-symbols-rounded">robot</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Automated Testing</div>
+                      <div class="submenu-description">
+                        Explore tools for automated accessibility testing.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="manual-testing.html" class="submenu-item">
+                    <span class="material-symbols-rounded">assignment</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Manual Testing</div>
+                      <div class="submenu-description">
+                        Techniques for manually testing accessibility.
+                      </div>
+                    </div>
+                  </a>
+                  <a href="screen-reader.html" class="submenu-item">
+                    <span class="material-symbols-rounded">hearing</span>
+                    <div class="submenu-text">
+                      <div class="submenu-label">Screen Reader</div>
+                      <div class="submenu-description">
+                        Best practices for testing with screen readers.
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
               <a
-                href="getting-started.html"
+                href="about.html"
                 class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Getting started</div></a
+                ><div>About</div></a
               >
               <a
-                href="design.html"
+                href="about.html"
                 class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Design</div></a
-              >
-              <a
-                href="write.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Write</div></a
-              >
-              <a
-                href="develop.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Develop</div></a
-              >
-              <a
-                href="testing.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Test</div></a
-              >
-              <a
-                href="support.html"
-                class="navigation-toggle-2 single-link w-inline-block"
-                ><div>Support</div></a
+                ><div>Contact</div></a
               >
             </nav>
+
             <!-- Menu Button -->
             <div
               class="menu-button"
