@@ -1,7 +1,7 @@
 /* Base styles that apply to all devices */
 :root {
   /* Font family */
-  --font-family-sans: "Figtree", sans-serif;
+  --font-family-sans: "plus-jakarta-sans", sans-serif;
 
   /* Font weight */
   --font-weight-regular: 450;
@@ -247,111 +247,6 @@ video {
   box-sizing: border-box;
 }
 
-.heading-4xl {
-  font-size: var(--font-size-1000);
-  line-height: var(--font-line-height-1200);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-densest);
-  font-family: var(--font-family-sans);
-  color: var(--color-brand-700);
-  margin-bottom: 0.5em;
-}
-
-.heading-3xl {
-  font-size: var(--font-size-900);
-  line-height: var(--font-line-height-1200);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-densest);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.heading-2xl {
-  font-size: var(--font-size-750);
-  line-height: var(--font-line-height-1000);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-denser);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.heading-xl {
-  font-size: var(--font-size-600);
-  line-height: var(--font-line-height-800);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-dense);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.heading-lg {
-  font-size: var(--font-size-500);
-  line-height: var(--font-line-height-600);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-dense);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.heading-md {
-  font-size: var(--font-size-350);
-  line-height: var(--font-line-height-500);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-normal);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.heading-sm {
-  font-size: var(--font-size-325);
-  line-height: var(--font-line-height-500);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--font-letter-spacing-normal);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  margin-bottom: 0.5em;
-}
-
-.body-lg {
-  font-size: var(--font-size-500);
-  line-height: var(--font-line-height-800);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: var(--font-letter-spacing-normal);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  max-width: 60ch;
-  margin-bottom: 1.5em;
-  overflow-wrap: break-word;
-}
-
-.body-md {
-  font-size: var(--font-size-400);
-  line-height: var(--font-line-height-600);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: var(--font-letter-spacing-normal);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  max-width: 60ch;
-  margin-bottom: 1.5em;
-}
-
-.body-sm {
-  font-size: var(--font-size-300);
-  line-height: var(--font-line-height-500);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: var(--font-letter-spacing-normal);
-  font-family: var(--font-family-sans);
-  color: var(--color-text);
-  max-width: 60ch;
-  margin-bottom: 1.5em;
-  overflow-wrap: break-word;
-}
-
 html,
 body {
   height: 100%;
@@ -359,7 +254,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--color-bg-surface);
-  font-family: var(--font-family-sans);
+}
+
+body {
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #474444;
+  background-color: #fff;
 }
 
 main {
@@ -385,10 +287,84 @@ a:hover {
   color: var(--color-brand-800);
 }
 
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 48px;
+  margin: 24px 0px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 32px;
+  margin-top: 34px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin: 0px 0px 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 35em;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 15.5px;
+}
+ol,
+ul {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: disc;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
 header {
   z-index: 10;
   position: fixed;
   inset: 0% 0% auto;
+}
+
+li {
+  display: list-item;
+  unicode-bidi: isolate;
+  padding-left: 2px;
+  font-size: 18px;
+}
+
+pre:has(code) {
+  background: #f1f1f1;
+  padding: 1.33em;
+  border-radius: 0.33em;
+}
+
+code {
+  background: #f1f1f1;
+  border-radius: 0.33em;
+  padding: 2px;
 }
 
 .navigation-wrapper {
@@ -604,6 +580,7 @@ footer {
   position: relative;
   transition: background-color 0.2s, color 0.2s;
   margin-right: 4px;
+  border-radius: 6px;
 }
 
 .navigation-toggle-dropdown:hover {
@@ -648,6 +625,7 @@ footer {
 
 .submenu-item .material-symbols-rounded {
   margin-right: 12px;
+  margin-top: 3px;
   /* font-size: 24px; */
   color: var(--color-brand-700);
 }
@@ -732,8 +710,10 @@ body.drawer-open {
 }
 
 .accordion-trigger {
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 16px;
   align-items: center;
   width: 100%;
   border-radius: 4px;
@@ -741,9 +721,8 @@ body.drawer-open {
   background-color: white;
   border: none;
   text-align: left;
-  font-size: var(--font-size-600);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
   outline: none;
@@ -783,6 +762,14 @@ body.drawer-open {
 .accordion-item:last-child {
   border-bottom: 1px solid #dcdcdc;
 }
+
+/* .accordion-content ul {
+  list-style-position: inside;
+}
+
+.accordion-content ul li {
+  margin-left: 0; 
+} */
 
 /* // Responsive styles */
 
